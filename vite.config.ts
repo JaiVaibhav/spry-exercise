@@ -3,4 +3,9 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
+   preview: {
+    host: "0.0.0.0",
+    port: 5173,                     // local default; Render will override via $PORT if you pass it
+    allowedHosts: ["spry-exercise.onrender.com"],
+  },
 })
